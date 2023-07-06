@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #c3def1;
+}
+.wrapper {
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px;
+  background: #83b1e0;
+  box-shadow: 0 20px 40px rgba(161, 172, 212, 0.2);
+}
+.game-info {
+  color: #fcfcfd;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 27px;
+  display: flex;
+  justify-content: space-between;
+}
+.snake-board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #f7f7f8;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+.snake-board .food {
+  background: #aceb8b;
+  border: 0.25vmin solid white;
+  border-radius: 20px;
+}
+.snake-board .head {
+  background: #60cbff;
+  border: 0.25vmin solid rgb(255, 255, 255);
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #f9fafa;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #c3def1;
+}
+
+.controls :hover {
+  color: rgb(173, 239, 192);
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-info {
+    font-size: 1rem;
+    padding: 15px 27px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+}
